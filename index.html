@@ -1,32 +1,42 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="./assets/styles.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <title>Head&tail</title>
 </head>
-<body>
-  <div class="container">
-    <div class="button-container">
-      <button id="plusFive">+5</button>
-      <br />
-      <br />
-      <button id="plusTen">+10</button>
-      <br />
-      <br />
-      <button id="plusFifteen">+15</button>
-      <br />
-      <br />
-      <button id="plusTwenty">+20</button>
-    </div>
-    <div class="display-container">
-      <h2 id="display-heading"></h2>
-      <h1 id="number-indicator">0</h1>
-    </div>
-  </div>
-  <script src="./assets/main.js"></script>
-</body>
 
+<body>
+ 
+  <h2> WELCOME TO THE HEADS OR TAILS GAME</h2>
+  <h3> RULES FOR THE GAME ARE AS FOLLOWS:</h3>
+  <P>This is a heads or tails game that will be played by a real person and a computer.</P>
+  <p>Where 1 represents Head and 0 represents Tail. Outcome is the final prediction.</p>
+  <p>The game should go for 5 rounds and the winner will be determined by who guessed the most rights on the 5 rounds.</P>
+  <p>Press the RESTART button to refresh the game and start again.</p>
+  <p>Have fun !!!</p>
+  <h2>YOU MAY NOW BEGIN</h2>
+  <div>
+  Round: <span id="rounds"></span> <br> <br>
+  <img src="./assets/images/head-side.png" alt="Head-side">
+  <img src="./assets/images/tail-side.png" alt="Tail-side">
+  <br> <br>
+  <span>Player: </span>
+  <button onclick="player('head')">Head</button>
+  <button onclick="player('tail')">Tail</button>
+  
+  <span>Computer:</span> <span id="comp"></span>
+  <br> <br>
+  <span>Outcome: </span> <strong><span id="outcome"></span></strong>
+  <br> <br>
+  PlayerCount:<span id="playerCount"></span>
+  <br>
+  CompCount:<span id="compCount"></span>
+  <p id="result"></p>
+  <button onclick="restart()">Restart</button>
+  </div>
+  <script src="./assets/main.js" ></script>
+</body>
 </html>
